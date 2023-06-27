@@ -11,3 +11,10 @@ const index = ({ params }: Props) => {
 };
 
 export default index;
+
+export const generateStaticParams = () => {
+  const products = ['pants', 'skirt'];
+  return products.map((products) => ({
+    slug: products,
+  }));
+};
